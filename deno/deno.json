@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "build": "deno compile --allow-read --allow-net --output ./dist/app ./main.ts",
+    "bnr": "deno task build && ./dist/app"
+  },
+  "imports": {
+    "hono": "jsr:@hono/hono@^4.4.12"
+  }
+}
