@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "esb": "./node_modules/esbuild/bin/esbuild index.ts --platform=node --bundle --minify --outfile=index.js",
+    "blob": "node --experimental-sea-config sea.json",
+    "copy": "cp $(command -v node) app",
+    "inject": "npx postject app NODE_SEA_BLOB ./index.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+    "build": "npm run esb && npm run blob && npm run copy && npm run inject"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "fastify": "^4.28.1"
+  }
+}

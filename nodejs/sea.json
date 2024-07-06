@@ -1,0 +1,8 @@
+{
+  "main": "index.js",
+  "output": "index.blob",
+  "disableExperimentalSEAWarning": true,
+  "assets": {
+    "help": "help.json"
+  }
+}
